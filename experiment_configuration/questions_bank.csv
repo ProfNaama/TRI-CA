@@ -1,39 +1,13 @@
 block_name,allow_block_permutation,allow_question_permutation,question_name,question_text,is_text,is_likert,is_grouped_likert,is_multi_choice,is_label,options
-SATDemo_Pre,0,0,sat_pre_header,"<strong>Before we begin</strong> — please answer a few quick questions about your SAT background.",0,0,0,0,1,
-SATDemo_Pre,0,0,sat_pre_instructions,"<h3>How This Works</h3>
-  <p>
-    You are about to work through two SAT practice questions with a tutor. Before you begin, we would like to learn a little about your current preparation level.
-  </p>
-  <h4>Please keep the following in mind:</h4>
-  <ol>
-    <li>Answer every question as honestly as possible — there are <strong>no right or wrong answers</strong> here.</li>
-    <li>Your responses will be kept <em>completely confidential</em> and used only for research purposes.</li>
-    <li>This questionnaire should take no more than <strong>2 minutes</strong> to complete.</li>
-  </ol>
-  <h4>About the SAT sections covered in this session:</h4>
-  <ul style=""padding-left:1.5rem; list-style-type:disc;"">
-    <li><strong>Writing &amp; Language</strong> — grammar, usage, and sentence structure</li>
-    <li><strong>Math</strong> — algebra and problem solving</li>
-  </ul>
-  <p style=""margin-top:0.8rem; color:#555; font-size:0.9em;"">
-    <em>When you are ready, scroll down and complete the questions below, then click <strong>Next</strong>.</em>
-  </p>",0,0,0,0,1,
-SATDemo_Pre,0,0,sat_pre_text1,What areas of the SAT do you currently find most challenging? (Describe briefly in your own words.),1,0,0,0,0,
-SATDemo_Pre,0,0,sat_pre_text2,Is there anything specific you are hoping to improve during this session?,1,0,0,0,0,
-SATDemo_Pre,0,0,sat_pre_likert1,How confident are you in your overall SAT preparation right now?,0,1,0,0,0,Not confident at all|Very confident
-SATDemo_Pre,0,0,sat_pre_likert2,How much do you enjoy studying for the SAT?,0,1,0,0,0,Not at all|Very much
-SATDemo_Pre,0,0,sat_pre_multichoice1,Which SAT section do you find most difficult?,0,0,0,1,0,Reading|Writing & Language|Math (No Calculator)|Math (Calculator)
-SATDemo_Pre,0,0,sat_pre_multichoice2,How do you usually study for the SAT?,0,0,0,1,0,Self-study with books|Online practice tests|Tutoring sessions|Study groups
-SATDemo_Pre,0,0,sat_pre_glk_header,"Rate your current confidence level in each of the following SAT areas — these two questions share the same scale and will appear as a single matrix table (1 = Not confident at all | 7 = Very confident):",0,0,0,0,1,
-SATDemo_Pre,0,0,sat_pre_glk_math,Math,0,0,1,0,0,Not confident at all|Very confident
-SATDemo_Pre,0,0,sat_pre_glk_reading,Reading,0,0,1,0,0,Not confident at all|Very confident
-SATDemo_Post,0,0,sat_post_header,"<strong>After your session</strong> — please reflect on your tutoring experience.",0,0,0,0,1,
-SATDemo_Post,0,0,sat_post_glk_note,"The next question uses the same scale as the question further below — but because a different question type appears between them they will each render individually rather than as a matrix table.",0,0,0,0,1,
-SATDemo_Post,0,0,sat_post_glk_math,How much did your Math confidence improve after this session?,0,0,1,0,0,No improvement|Great improvement
-SATDemo_Post,0,0,sat_post_multichoice1,Would you want to work with this tutor again?,0,0,0,1,0,Definitely yes|Probably yes|Probably not|Definitely not
-SATDemo_Post,0,0,sat_post_glk_reading,How much did your Reading confidence improve after this session?,0,0,1,0,0,No improvement|Great improvement
-SATDemo_Post,0,0,sat_post_multichoice2,How would you describe the tutor's overall teaching style?,0,0,0,1,0,Too strict|About right|Too lenient|Hard to say
-SATDemo_Post,0,0,sat_post_likert1,Overall how helpful was the tutoring session?,0,1,0,0,0,Not helpful at all|Extremely helpful
-SATDemo_Post,0,0,sat_post_likert2,How likely are you to recommend this tutor to a friend?,0,1,0,0,0,Not likely at all|Very likely
-SATDemo_Post,0,0,sat_post_text1,What was the most helpful thing your tutor explained? (Describe briefly.),1,0,0,0,0,
-SATDemo_Post,0,0,sat_post_text2,What would you like the tutor to do differently next time?,1,0,0,0,0,
+Demo_block_1,0,0,Demo_q1,These are Likert-scale questions.,0,0,0,0,1,
+Demo_block_1,0,0,Demo_q2,Text 1,0,1,0,0,0,Not at all|Very much
+Demo_block_1,0,0,Demo_q3,Text 2,0,1,0,0,0,Agree|Disagree
+Demo_block_2,1,1,Demo_q4,These are grouped Likert-scale questions.,0,0,0,0,1,
+Demo_block_2,1,1,Demo_q5,Text 1,0,0,1,0,0,Not at all|Very much
+Demo_block_2,1,1,Demo_q6,Text 2,0,0,1,0,0,Not at all|Very much
+Demo_block_3,1,1,Demo_q7,These are open-ended questions.,0,0,0,0,1,
+Demo_block_3,1,1,Demo_q8,Text 1,1,0,0,0,0,
+Demo_block_3,1,1,Demo_q9,Text 2,1,0,0,0,0,
+Demo_block_4,1,1,Demo_q11,These are open-ended questions.,0,0,0,0,1,
+Demo_block_4,1,1,Demo_q12,Text 1,0,0,0,1,0,Option 1|Option 2|Option 3|Option 4
+Demo_block_4,1,1,Demo_q13,Text 2,0,0,0,1,0,Option 1|Option 2|Option 3|Option 5

@@ -1,14 +1,17 @@
 page,title,header,body1
 chat,TRI-CA,Chat with an AI agent,
-consent,TRI-CA,Online Consent for the Study,"<p>Participation in this study is voluntary.<br>
-You may stop or withdraw your participation at any time.<br>
-We do not collect any personal or identifiable information.<br>
-Your responses are anonymous and will not be linked to you in any way. <br>The anonymized data we collect will be used for research purposes only.<br> 
-By continuing to the next page you confirm that you understand the above information and agree to participate.
+consent,TRI-CA,Online Consent for the Study,"<p>
+  On this page, users will see the consent form. You can update this text using the
+  <code>experiment_description.csv</code> file.
+</p>
+<p>
+  At the bottom of the page, the consent buttons are displayed. These can be edited
+  on the server.
+</p>
 "
 pre_questionnaire,TRI-CA,Please read the following instructions,
 post_questionnaire,TRI-CA,Thank you for participating,
 session_ended,TRI-CA,Thank You for participating in the study.<br/>,
 error,TRI-CA,We are sorry - an error has occured. Please close your browser and try again,
-welcome_code,TRI-CA,Welcome,Please enter your access code
-user_preferences,TRI-CA,Welcome to the TRI-CA experiment website,In the next page you will be asked to engageg with an AI agent. Please personalize your preferences:
+welcome_code,TRI-CA,Welcome to TRI-CA,Please enter your access code
+user_preferences,TRI-CA,Welcome to the ChatLab experiment website,In the next page you will be asked to engageg with an AI agent. Please personalize your preferences:

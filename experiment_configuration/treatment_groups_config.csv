@@ -1,3 +1,3 @@
 treatment_group,user_name,user_avatar,agent_name,agent_avatar,hidden_prompt,user_task_description,user_pre_questions,user_post_questions
-1,,user_avatar_06.png,Dr. Reed,agent_avatar_1.png,StrictTutorPrompt.txt,sat_task_desc.html,SATDemo_Pre,SATDemo_Post
-2,,user_avatar_06.png,Sam,user_avatar_01.png,WarmTutorPrompt.txt,sat_task_desc.html,SATDemo_Pre,SATDemo_Post
+1,,user_avatar_06.png,Adam,agent_avatar_16.png,StrictTutorPrompt.txt,sat_task_desc.html,Demo_block_1;Demo_block_2;Demo_block_3;Demo_block_4;,Demo_block_1;Demo_block_2;Demo_block_3;Demo_block_4;
+2,,user_avatar_05.png,Eve,agent_avatar_16.png,WarmTutorPrompt.txt,sat_task_desc.html,Demo_block_1;Demo_block_2;Demo_block_3;Demo_block_4;,Demo_block_1;Demo_block_2;Demo_block_3;Demo_block_4;
