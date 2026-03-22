@@ -1,0 +1,258 @@
+:root {
+    --gray: rgb(234, 234, 234);
+    --beigh: rgb(237, 228, 197);
+    --grayBLU: #cee3e9;
+    --Light_Gray: rgb(241, 240, 240);
+    --Very_Light_Gray: rgb(241, 240, 240, 0.5);
+    --Light_Yellow: rgb(250, 250, 0,0.2) ;
+}
+
+@font-face {
+    font-family: MyFont;
+    src: url(../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 4px;
+    margin: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    /* border: 1px solid gray; */
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "left main"
+    "left footer";
+    grid-template-columns: 10vw auto;
+}
+.header {
+    grid-area: header;
+    background-color: var(--Light_Gray);
+    border-radius: 16px;
+    height: 5vh;
+}
+
+.left {
+    grid-area: left;
+    background-color: var(--Light_Gray);
+    border-radius: 16px;
+}
+
+.content {
+    grid-area: main;
+    border-radius: 16px;
+    min-height: 90vh;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--gray);
+    border-radius: 12px;
+}
+
+.conversation {
+    /* max height is 75% of the screen height; */
+    max-height: 75vh;
+    overflow-y: scroll;
+    display: flex; 
+    flex-direction: column; 
+    padding: 0px;
+    margin: 0px;
+}
+
+.chat-user , .chat-agent{
+    /* this is the box of the user */
+    margin-left: 0px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.agent-card, .user-card {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+.chat-avatar {
+    /* this is the box of both icons */
+    border-radius: 50%;
+    background-color: var(--Light_Gray);
+    height: 50px;
+}
+
+.chat-last {
+    border: 2px solid var(--grayBLU);
+    border-radius: 12px;     
+    margin: 10px
+}
+
+.task_description{
+    background-color: var(--grayBLU);
+}
+
+.controlled_header{
+    background-color: var(--Very_Light_Gray);
+    border-radius: 16px;
+    margin-left: -4px;
+}
+
+.controlled_body{
+    /* background-color: white; */
+    margin-left: 0px;
+
+}
+
+.avatar_selection {
+    width: 75vw;
+    /* height: 200px;  */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cardContainer {
+    border: 2px solid var(--gray);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .cardA {
+    width: 12%;
+    background-color: white;
+}
+
+.cardB {
+    width: 80%;
+    background-color: white;
+} */
+
+.avatarIMG {
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
+
+#avatarName {
+    text-align: center;
+}
+
+#chatForm {
+    padding: 12% 0 0;
+}
+
+input[type=submit] {
+    background-color:gray;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid gray;
+    }
+
+.form-text-input {
+    border-radius: 12px;  
+    border: 1px solid gray;
+    padding-right: 10px;
+    width: 80%; 
+}
+
+#message {
+    border-radius: 12px;  
+    border: 1px solid gray;
+    padding-right: 10px;
+    width: 40%;
+}
+
+#avaterSelect {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+form * {
+    width: max-content;
+    /* margin: inherit; */
+}
+
+.AvatarOption * {
+    display: block;
+}
+
+p {
+    line-height: 200%;
+}
+
+ol {
+    padding-left: 50px;
+}
+
+/* design rules for questionnaire */
+
+.demo_qustionnaire {
+    padding: 0%;
+    margin: 0%;
+    width: 90%;
+}
+
+.LikertItemTable {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 0px;
+    /* border-bottom: 2px solid var(--gray); */
+}
+
+.LikertItemTable * {
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.LikertItemTable tr td{
+    border-bottom: 1px solid var(--gray);
+}
+
+.Likert_Q_culmn {
+    width: auto;
+    /* width: fit-content; */
+}
+
+.Likert_left_scale_culmn {
+    width: 20%;
+    text-align: center;
+}
+
+.Likert_radio_culmn {
+    width: 150px;
+    text-align: center;
+}
+
+.Likert_right_scale_culmn {
+    width: 20%;
+    text-align: center;
+}
+
+.H3_q_Item {
+    width: 100%;
+}
+
+.instructions_q_label {
+    width: 100%;
+    font-style: italic;
+    background-color: var(--Very_Light_Gray);
+    margin-top: 8px;
+    /* margin-bottom: -8px; */
+    border-radius: 16px;
+    line-height: 200%;
+}
+
+.q_text {
+    border-bottom: 2px solid var(--gray);
+    width: 100%;
+}
+

@@ -1,0 +1,9 @@
+extends layout
+block content 
+
+    form(method='POST' action='/submit_user_response')
+        input(type="hidden", name="form_type", value=form_type)
+        label(for="prolificCode") Code 
+        input(type="text", id="prolificCode", class="form-text-input" name="code", placeholder="Your access code... ", required)
+        br
+        input(type='submit', value='Enter')
