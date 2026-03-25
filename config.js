@@ -5,6 +5,7 @@ config.experimentId = process.env['EXPERIMENT_ID'];
 
 // complete code
 config.complete_code = process.env['COMPLETE_CODE'];
+config.generateUniqueCompletionCode = !config.complete_code && process.env['GENERATE_UNIQUE_COMPLETION_CODE'] && parseInt(process.env['GENERATE_UNIQUE_COMPLETION_CODE']) != 0;
 config.redirect_url = process.env['REDIRECT_URL'];
 
 // openai

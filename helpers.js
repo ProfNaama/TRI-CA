@@ -1,6 +1,7 @@
 const csv = require('csv-parser')
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const config = require('./config.js');
 const { Pool } = require('pg');
 const sessionMgmt = require('./sessionManagement.js');
@@ -377,6 +378,10 @@ async function setCodeCompleted(code, obj) {
     }
 }
 
+function generateUniqueCompletionCode() {
+    return crypto.randomBytes(4).toString('hex').toUpperCase();
+}
+
 module.exports = {
     waitForSystemInitializiation,
     getTreatmentGroupId,
@@ -389,5 +394,6 @@ module.exports = {
     getRenderingParamsForPage,
     getUserTaskDescription,
     getUserPreferences,
-    getUserTestQuestions
+    getUserTestQuestions,
+    generateUniqueCompletionCode
 }

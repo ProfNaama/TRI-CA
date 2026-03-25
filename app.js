@@ -270,7 +270,11 @@ async function handlePostQuestionnaireSubmission(req, res) {
     if (!sessionManager.getQuestionsAnswers()) {
         sessionManager.setFinished(true);
         sessionManager.setRedirectUrl(config.redirect_url);
-        sessionManager.setCompletionCode(config.complete_code);
+        if (config.complete_code) {
+            sessionManager.setCompletionCode(config.complete_code);
+        } else if (config.generateUniqueCompletionCode) {
+            sessionManager.setCompletionCode(helpers.generateUniqueCompletionCode());
+        }
         sessionManager.setUserQuestionnaireEndedTime(new Date().toISOString());
         sessionManager.setQuestionsAnswers(req.body);
     }

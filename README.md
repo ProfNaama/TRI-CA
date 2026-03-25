@@ -162,7 +162,8 @@ PORT=3030  # Optional: defaults to 3030
 - `BASE64_ENCODE`: If set (non-zero), data stored/transmitted will be base64-encoded by default.
 - `REUSABLE_CODE`: Developer testing code that bypasses DB code-check (useful for local testing).
 - `EXPERIMENT_ID`: Identifier for the experiment.
-- `COMPLETE_CODE`: Completion code given to participants when they finish the study.
+- `COMPLETE_CODE`: A researcher-defined static completion code given to all participants when they finish the study. Takes priority over `GENERATE_UNIQUE_COMPLETION_CODE`.
+- `GENERATE_UNIQUE_COMPLETION_CODE`: If set to `1` and `COMPLETE_CODE` is not set, the server generates a unique 8-character code per participant at completion. The code is shown to the participant and saved to the database.
 - `REDIRECT_URL`: URL to redirect participants after completion (used to redirect users back to the referrer site ,e.g. Prolific).
 - `OPENAI_TOKEN_LIMIT`: Maximum tokens for OpenAI responses (default is 1000).
 - `OPENAI_MODEL`: OpenAI model to use (default `gpt-4o`).
