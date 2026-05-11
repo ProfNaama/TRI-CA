@@ -1,0 +1,7 @@
+extends layout
+block content 
+    if completion_code
+        p Please save the following code for future reference: #{completion_code}
+    if redirect_url
+        form(method="get", action=redirect_url)
+            input(type="submit", value="Next")

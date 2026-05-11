@@ -1,0 +1,89 @@
+extends layout
+
+mixin text(q) 
+    div(class='q_text')
+        h3(class="H3_q_Item")!=q["label"]
+        input(type='text', class="form-text-input" name=q["name"], required="required")
+
+mixin multichoice(q) 
+    h3(class="H3_q_Item")!=q["label"]
+    each choice in q["choices"]
+        input(type='radio', class="radio_selection" name=q["name"], value=choice, required="required")
+        label=choice
+        br
+
+mixin likert(q) 
+    table(class="LikertItemTable") 
+        tr 
+            td(class='Likert_Q_culmn')
+                if q["label"]
+                    h3(class="H3_q_Item")!=q["label"]
+            td(class='Likert_left_scale_culmn') 
+                label= "1 ("+ q["choices"][0] + ")"
+            td(class='Likert_radio_culmn')
+                input(type='radio', class="radio_selection" name=q["name"], value="1", required="required")
+                input(type='radio', class="radio_selection" name=q["name"], value="2", required="required")
+                input(type='radio', class="radio_selection" name=q["name"], value="3", required="required")
+                input(type='radio', class="radio_selection" name=q["name"], value="4", required="required")
+                input(type='radio', class="radio_selection" name=q["name"], value="5", required="required")
+                input(type='radio', class="radio_selection" name=q["name"], value="6", required="required")
+                input(type='radio', class="radio_selection" name=q["name"], value="7", required="required") 
+            td(class='Likert_right_scale_culmn')
+                label= "7 (" + q["choices"][1] + ")" 
+
+mixin grouped_likert(q)
+    table(class="LikertItemTable") 
+        tr 
+            td(class='Likert_Q_culmn')
+            td(class='Likert_left_scale_culmn')
+                label= "1 (" + q["choices"][0] + ")"
+            td(class='Likert_radio_culmn')
+            td(class='Likert_right_scale_culmn')
+                label= "7 (" + q["choices"][1] + ")"     
+        
+        each name_label_tuple in q["grouped_questions"]
+            tr
+                td(class='Likert_Q_culmn') 
+                    h3(class="H3_q_Item")!=name_label_tuple["label"]
+                td(class='Likert_left_scale_culmn')
+                    label="1"
+                td(class='Likert_radio_culmn')
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="1", required="required")
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="2", required="required")
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="3", required="required")
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="4", required="required")
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="5", required="required")
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="6", required="required")
+                    input(type='radio', class="radio_selection" name=name_label_tuple["name"], value="7", required="required") 
+                td(class='Likert_right_scale_culmn')
+                    label= "7"
+
+mixin label_text(q) 
+    if q["label"]
+        h3(class="instructions_q_label")!=q["label"]
+
+
+block content 
+
+    form(class="demo_qustionnaire" method='POST' action='/submit_user_response')
+        input(type="hidden", name="form_type", value=form_type)
+        if questions
+            // Loop through the elements of questions objects
+            // questions could be of type text, multi_choice, likert, or grouped_likert
+            // submit all the question names and user answers to the server
+            each q in questions
+                
+                if q["is_text"] == true
+                    +text(q)
+                else if q["is_multi_choice"] == true
+                    +multichoice(q)
+                else if q["is_likert"] == true
+                    +likert(q)
+                else if q["is_grouped_likert"] == true
+                    +grouped_likert(q)
+                else if q["is_label"] == true
+                    +label_text(q)
+                br
+                
+
+        input(type='submit' value=form_submit_botton_text)

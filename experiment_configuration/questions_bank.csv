@@ -1,0 +1,13 @@
+block_name,allow_block_permutation,allow_question_permutation,question_name,question_text,is_text,is_likert,is_grouped_likert,is_multi_choice,is_label,options
+Demo_block_1,0,0,Demo_q1,<strong>Example block 1.</strong> These are single-item Likert questions that can measure baseline attitudes or post-task outcomes.,0,0,0,0,1,
+Demo_block_1,0,0,Demo_q2,<strong>Example single-item question.</strong> Replace this text with one attitude or outcome item that matters in your study.,0,1,0,0,0,Not at all|Very much
+Demo_block_1,0,0,Demo_q3,"This item shows that quoted text such as ""important instruction"" can appear in question wording.",0,1,0,0,0,Strongly disagree|Strongly agree
+Demo_block_2,1,1,Demo_q4,<strong>Example block 2.</strong> These are grouped Likert questions that share one response scale across several related statements.,0,0,0,0,1,
+Demo_block_2,1,1,Demo_q5,This grouped item shows how one statement can appear inside a shared battery of related measures.,0,0,1,0,0,Strongly disagree|Strongly agree
+Demo_block_2,1,1,Demo_q6,Researchers often use grouped Likert items for trust usability workload or other multi-item constructs.,0,0,1,0,0,Strongly disagree|Strongly agree
+Demo_block_3,1,1,Demo_q7,<strong>Example block 3.</strong> These are open-ended text questions for comments explanations or qualitative reflections.,0,0,0,0,1,
+Demo_block_3,1,1,Demo_q8,Briefly describe how you might adapt this baseline template for your own study.,1,0,0,0,0,
+Demo_block_3,1,1,Demo_q9,Which study materials would you replace first: page text questions task instructions or hidden prompts?,1,0,0,0,0,
+Demo_block_4,1,1,Demo_q11,<strong>Example block 4.</strong> These are single-select multiple-choice questions with one answer chosen from a fixed set of options.,0,0,0,0,1,
+Demo_block_4,1,1,Demo_q12,Which TRI-CA configuration area would you most likely edit first?,0,0,0,1,0,questions_bank.csv|experiment_desc.csv|treatment_groups_config.csv|hidden_prompts_bank/
+Demo_block_4,1,1,Demo_q13,Which response format would be most useful in your study?,0,0,0,1,0,Single Likert item|Grouped Likert block|Open-ended text|A mix of several formats

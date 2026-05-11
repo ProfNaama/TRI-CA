@@ -1,0 +1,34 @@
+-- PostgreSQL schema for this project
+--
+-- Run with:
+--   psql "$DATABASE_URL" -f pre_requisites/postgres_table.txt
+
+BEGIN;
+
+CREATE TABLE IF NOT EXISTS tri_ca_results (
+    uuid        integer NOT NULL,
+    expid       varchar(256),
+    userid      varchar(256),
+    result      json NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tri_ca_codes (
+    code        varchar(256) NOT NULL,
+    expid       varchar(256) NOT NULL,
+    completed   json,
+    PRIMARY KEY (code, expid)
+);
+
+COMMIT;
+
+-- Optional helper indexes (recommended for larger studies)
+CREATE INDEX IF NOT EXISTS idx_tri_ca_results_expid ON tri_ca_results (expid);
+CREATE INDEX IF NOT EXISTS idx_tri_ca_results_uuid  ON tri_ca_results (uuid);
+
+-- Example: fetch joined results for a specific experiment id
+-- Replace 'your_experiment_id' with your EXPERIMENT_ID value.
+SELECT c.code, c.expid, c.completed, r.uuid, r.userid, r.result
+FROM tri_ca_codes c
+JOIN tri_ca_results r
+  ON c.completed->>'uid' = CAST(r.uuid AS TEXT)
+WHERE c.expid = 'your_experiment_id';
